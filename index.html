@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>השוואת דירות Airbnb</title>
+    <title>השוואת וילות</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f9fbfd;
             margin: 0;
             padding: 20px;
-            direction: rtl;
         }
         .page-title {
             text-align: center;
@@ -21,135 +20,100 @@
             border-radius: 10px;
             margin-bottom: 24px;
         }
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 8px;
+        .villa-card {
             background: #fff;
-            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border-radius: 8px;
             overflow: hidden;
         }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
+        .villa-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background-color: #f0f0f0;
+        }
+        .villa-details {
+            padding: 15px;
+        }
+        .villa-details h2 {
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+        }
+        .villa-details p {
+            margin: 6px 0;
             font-size: 0.95em;
             color: #34495e;
         }
-        th {
-            background-color: #f5f7fa;
-            font-weight: bold;
-            color: #34495e;
-        }
-        a {
+        .villa-details a {
             color: #3498db;
             text-decoration: none;
-            font-size: 0.95em;
-            transition: font-weight 0.15s;
         }
-        a:hover {
+        .villa-details a:hover {
             text-decoration: underline;
-            font-weight: bold;
-        }
-        .airbnb-image {
-            width: 120px;
-            height: 90px;
-            border-radius: 8px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
         }
         @media (max-width: 768px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-            thead tr {
-                display: none;
-            }
-            tr {
-                margin-bottom: 20px;
-                background: #fff;
-                border-radius: 10px;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-                padding: 10px;
-            }
-            td {
-                text-align: right;
-                border: none;
-                font-size: 1em;
-                padding: 8px 5px;
-            }
-            td::before {
-                content: attr(data-label);
-                font-weight: bold;
-                display: block;
-                margin-bottom: 5px;
-                color: #555;
+            .villa-image {
+                height: 180px;
             }
         }
     </style>
 </head>
 <body>
 
-<h1 class="page-title">השוואת דירות Airbnb</h1>
+    <h1 class="page-title">השוואת וילות</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>תמונה</th>
-            <th>לינק</th>
-            <th>מחיר</th>
-            <th>תאריכים</th>
-            <th>מיקום</th>
-            <th>זמן נסיעה</th>
-            <th>מפה</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">
-                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NjYyMTAzMTE5MTkwODA1Nzc0/original/42ab0719-9dcd-4421-88a7-0fee61c5e625.jpeg?im_w=1200" alt="וילה 1" class="airbnb-image"></a></td>
-            <td><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">וילה 1</a></td>
-            <td>4,907 ₪ (סה״כ)</td>
-            <td>21-22.8 (שישי-שבת)</td>
-            <td>מושב הודיה (ליד אשקלון)</td>
-            <td>כ-45 דקות</td>
-            <td><a href="https://www.google.com/maps/place/31.656883,34.598064" target="_blank">למפה</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">
-                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1083261386400424042/original/8ddd7832-8187-48b8-b2f3-1cea32eec765.jpeg?im_w=1200" alt="וילה 2" class="airbnb-image"></a></td>
-            <td><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">וילה 2</a></td>
-            <td>2,510 ₪ (סה״כ)</td>
-            <td>21-22.8 (שישי-שבת)</td>
-            <td>אחוזת ברק, עמק יזרעאל</td>
-            <td>כ-1 שעה ו-45 דקות</td>
-            <td><a href="https://www.google.com/maps/place/32.629239,35.328362" target="_blank">למפה</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">
-                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTM2NjE4NzU2NTk1MjQ1MTU5/original/237d358c-82cb-489e-ba36-bf0e0ad2dd4d.jpeg?im_w=1440" alt="וילה 3" class="airbnb-image"></a></td>
-            <td><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">וילה 3</a></td>
-            <td>2,633 ₪ (ללא החזר) / 2,926 ₪ (עם החזר)</td>
-            <td>7-8.8 (חמישי-שישי)</td>
-            <td>אשדוד</td>
-            <td>כ-35 דקות</td>
-            <td><a href="https://www.google.com/maps/place/31.801447,34.643497" target="_blank">למפה</a></td>
-        </tr>
-        <tr>
-            <td><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">
-                <img src="https://a0.muscache.com/im/pictures/a11b7015-8392-4495-9757-243b3129c5b8.jpg?im_w=1200" alt="וילה 4" class="airbnb-image"></a></td>
-            <td><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">וילה 4</a></td>
-            <td>3,994 ₪ (סה״כ)</td>
-            <td>7-8.8 (חמישי-שישי)</td>
-            <td>מושב עוצם (ליד קרית גת)</td>
-            <td>כ-50 דקות</td>
-            <td><a href="https://www.google.com/maps/place/31.617545,34.742180" target="_blank">למפה</a></td>
-        </tr>
-    </tbody>
-</table>
+    <div class="villa-card">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NjYyMTAzMTE5MTkwODA1Nzc0/original/42ab0719-9dcd-4421-88a7-0fee61c5e625.jpeg?im_w=1200" alt="וילה 1">
+        <div class="villa-details">
+            <h2>וילה מרהיבה - הודיה</h2>
+            <p><strong>מחיר:</strong> 4,907 ₪ (כולל דמי ניקיון ושירות)</p>
+            <p><strong>תאריכים:</strong> 21.8.2025 - 22.8.2025 (שישי-שבת)</p>
+            <p><strong>מיקום:</strong> מושב הודיה, ליד אשקלון</p>
+            <p><strong>זמן נסיעה מרמת גן:</strong> כ-45 דקות</p>
+            <p><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">קישור לוילה</a></p>
+            <p><a href="https://maps.google.com/?q=Hodaya+Israel" target="_blank">למפה</a></p>
+        </div>
+    </div>
+
+    <div class="villa-card">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1083261386400424042/original/8ddd7832-8187-48b8-b2f3-1cea32eec765.jpeg?im_w=1200" alt="וילה 2">
+        <div class="villa-details">
+            <h2>הבית היזרעאלי - אחוזת ברק</h2>
+            <p><strong>מחיר:</strong> 3,081 ₪ (כולל דמי שירות) <br> אפשרות החזר מלא עד 3 באוגוסט</p>
+            <p><strong>תאריכים:</strong> 8.8.2025 - 9.8.2025 (חמישי-שישי)</p>
+            <p><strong>מיקום:</strong> אחוזת ברק, עמק יזרעאל</p>
+            <p><strong>זמן נסיעה מרמת גן:</strong> כ-1 שעה ו-45 דקות</p>
+            <p><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">קישור לוילה</a></p>
+            <p><a href="https://maps.google.com/?q=Ahuzat+Barak+Israel" target="_blank">למפה</a></p>
+        </div>
+    </div>
+
+    <div class="villa-card">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTM2NjE4NzU2NTk1MjQ1MTU5/original/237d358c-82cb-489e-ba36-bf0e0ad2dd4d.jpeg?im_w=1440" alt="וילה 3">
+        <div class="villa-details">
+            <h2>בית השמש - אשדוד</h2>
+            <p><strong>מחיר:</strong> 2,925 ₪ (כולל דמי שירות)</p>
+            <p><strong>תאריכים:</strong> 7.8.2025 - 8.8.2025 (חמישי-שישי)</p>
+            <p><strong>מיקום:</strong> אשדוד</p>
+            <p><strong>זמן נסיעה מרמת גן:</strong> כ-35 דקות</p>
+            <p><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">קישור לוילה</a></p>
+            <p><a href="https://maps.google.com/?q=Ashdod+Israel" target="_blank">למפה</a></p>
+        </div>
+    </div>
+
+    <div class="villa-card">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/a11b7015-8392-4495-9757-243b3129c5b8.jpg?im_w=1200" alt="וילה 4">
+        <div class="villa-details">
+            <h2>וילה עוצם - מושב עוצם</h2>
+            <p><strong>מחיר:</strong> 3,994 ₪ (כולל דמי שירות)</p>
+            <p><strong>תאריכים:</strong> 7.8.2025 - 8.8.2025 (חמישי-שישי)</p>
+            <p><strong>מיקום:</strong> מושב עוצם, ליד קרית גת</p>
+            <p><strong>זמן נסיעה מרמת גן:</strong> כ-50 דקות</p>
+            <p><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">קישור לוילה</a></p>
+            <p><a href="https://maps.google.com/?q=Otzem+Israel" target="_blank">למפה</a></p>
+        </div>
+    </div>
 
 </body>
 </html>
