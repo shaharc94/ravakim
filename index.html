@@ -29,9 +29,10 @@
         }
         .villa-image {
             width: 100%;
-            height: 250px;
+            max-height: 250px;
             object-fit: contain;
             background-color: #f0f0f0;
+            cursor: pointer;
         }
         .villa-details {
             padding: 15px;
@@ -45,6 +46,12 @@
             font-size: 0.95em;
             color: #34495e;
         }
+        .villa-details ul {
+            margin: 6px 0 12px 0;
+            font-size: 0.9em;
+            padding-right: 20px;
+            color: #555;
+        }
         .villa-details a {
             color: #3498db;
             text-decoration: none;
@@ -54,7 +61,7 @@
         }
         @media (max-width: 768px) {
             .villa-image {
-                height: 180px;
+                max-height: 180px;
             }
         }
     </style>
@@ -64,56 +71,88 @@
     <h1 class="page-title">השוואת וילות</h1>
 
     <div class="villa-card">
-        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NjYyMTAzMTE5MTkwODA1Nzc0/original/42ab0719-9dcd-4421-88a7-0fee61c5e625.jpeg?im_w=1200" alt="וילה 1">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NjYyMTAzMTE5MTkwODA1Nzc0/original/42ab0719-9dcd-4421-88a7-0fee61c5e625.jpeg?im_w=1200" alt="וילה 1" onclick="openImage(this.src)">
         <div class="villa-details">
             <h2>וילה מרהיבה - הודיה</h2>
             <p><strong>מחיר:</strong> 4,907 ₪ (כולל דמי ניקיון ושירות)</p>
-            <p><strong>תאריכים:</strong> 21.8.2025 - 22.8.2025 (שישי-שבת)</p>
-            <p><strong>מיקום:</strong> מושב הודיה, ליד אשקלון</p>
-            <p><strong>זמן נסיעה מרמת גן:</strong> כ-45 דקות</p>
-            <p><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">קישור לוילה</a></p>
-            <p><a href="https://maps.google.com/?q=Hodaya+Israel" target="_blank">למפה</a></p>
+            <p><strong>מתקנים:</strong></p>
+            <ul>
+                <li>בריכה פרטית</li>
+                <li>מטבח + מטבח חוץ</li>
+                <li>פינת מדורה</li>
+                <li>שולחן פינג פונג</li>
+                <li>חניה חופשית</li>
+                <li>גישה לים במרחק נסיעה קצר</li>
+            </ul>
+            <p><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">קישור לוילה</a> | <a href="https://maps.google.com/?q=Hodaya+Israel" target="_blank">למפה</a></p>
         </div>
     </div>
 
     <div class="villa-card">
-        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1083261386400424042/original/8ddd7832-8187-48b8-b2f3-1cea32eec765.jpeg?im_w=1200" alt="וילה 2">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-1083261386400424042/original/8ddd7832-8187-48b8-b2f3-1cea32eec765.jpeg?im_w=1200" alt="וילה 2" onclick="openImage(this.src)">
         <div class="villa-details">
             <h2>הבית היזרעאלי - אחוזת ברק</h2>
             <p><strong>מחיר:</strong> 3,081 ₪ (כולל דמי שירות) <br> אפשרות החזר מלא עד 3 באוגוסט</p>
-            <p><strong>תאריכים:</strong> 8.8.2025 - 9.8.2025 (חמישי-שישי)</p>
-            <p><strong>מיקום:</strong> אחוזת ברק, עמק יזרעאל</p>
-            <p><strong>זמן נסיעה מרמת גן:</strong> כ-1 שעה ו-45 דקות</p>
-            <p><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">קישור לוילה</a></p>
-            <p><a href="https://maps.google.com/?q=Ahuzat+Barak+Israel" target="_blank">למפה</a></p>
+            <p><strong>מתקנים:</strong></p>
+            <ul>
+                <li>בריכה פרטית</li>
+                <li>ג'קוזי פרטי</li>
+                <li>טלוויזיה חכמה + נטפליקס</li>
+                <li>Wi-Fi</li>
+                <li>חניה חינם</li>
+            </ul>
+            <p><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">קישור לוילה</a> | <a href="https://maps.google.com/?q=Ahuzat+Barak+Israel" target="_blank">למפה</a></p>
         </div>
     </div>
 
     <div class="villa-card">
-        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTM2NjE4NzU2NTk1MjQ1MTU5/original/237d358c-82cb-489e-ba36-bf0e0ad2dd4d.jpeg?im_w=1440" alt="וילה 3">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTM2NjE4NzU2NTk1MjQ1MTU5/original/237d358c-82cb-489e-ba36-bf0e0ad2dd4d.jpeg?im_w=1440" alt="וילה 3" onclick="openImage(this.src)">
         <div class="villa-details">
             <h2>בית השמש - אשדוד</h2>
             <p><strong>מחיר:</strong> 2,925 ₪ (כולל דמי שירות)</p>
-            <p><strong>תאריכים:</strong> 7.8.2025 - 8.8.2025 (חמישי-שישי)</p>
-            <p><strong>מיקום:</strong> אשדוד</p>
-            <p><strong>זמן נסיעה מרמת גן:</strong> כ-35 דקות</p>
-            <p><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">קישור לוילה</a></p>
-            <p><a href="https://maps.google.com/?q=Ashdod+Israel" target="_blank">למפה</a></p>
+            <p><strong>מתקנים:</strong></p>
+            <ul>
+                <li>בריכה גדולה</li>
+                <li>שולחן פינג פונג + ביליארד</li>
+                <li>מטבח מאובזר</li>
+                <li>Wi-Fi</li>
+                <li>חניה חינם</li>
+            </ul>
+            <p><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">קישור לוילה</a> | <a href="https://maps.google.com/?q=Ashdod+Israel" target="_blank">למפה</a></p>
         </div>
     </div>
 
     <div class="villa-card">
-        <img class="villa-image" src="https://a0.muscache.com/im/pictures/a11b7015-8392-4495-9757-243b3129c5b8.jpg?im_w=1200" alt="וילה 4">
+        <img class="villa-image" src="https://a0.muscache.com/im/pictures/a11b7015-8392-4495-9757-243b3129c5b8.jpg?im_w=1200" alt="וילה 4" onclick="openImage(this.src)">
         <div class="villa-details">
             <h2>וילה עוצם - מושב עוצם</h2>
             <p><strong>מחיר:</strong> 3,994 ₪ (כולל דמי שירות)</p>
-            <p><strong>תאריכים:</strong> 7.8.2025 - 8.8.2025 (חמישי-שישי)</p>
-            <p><strong>מיקום:</strong> מושב עוצם, ליד קרית גת</p>
-            <p><strong>זמן נסיעה מרמת גן:</strong> כ-50 דקות</p>
-            <p><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">קישור לוילה</a></p>
-            <p><a href="https://maps.google.com/?q=Otzem+Israel" target="_blank">למפה</a></p>
+            <p><strong>מתקנים:</strong></p>
+            <ul>
+                <li>בריכת גלישה פרטית</li>
+                <li>חצר גדולה עם מדשאות</li>
+                <li>מיטות שיזוף</li>
+                <li>Wi-Fi</li>
+                <li>חניה חינם</li>
+            </ul>
+            <p><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">קישור לוילה</a> | <a href="https://maps.google.com/?q=Otzem+Israel" target="_blank">למפה</a></p>
         </div>
     </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
+        <img id="modalImg" style="max-width:90%;max-height:90%;border:5px solid #fff;border-radius:10px;">
+    </div>
+
+    <script>
+        function openImage(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+        document.getElementById('imageModal').onclick = function() {
+            this.style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
