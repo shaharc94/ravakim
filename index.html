@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>השוואת דירות Airbnb</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fbfd;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        .page-title {
+            text-align: center;
+            background-color: #eef2f7;
+            color: #2c3e50;
+            font-size: 1.5em;
+            padding: 18px 0;
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 8px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.95em;
+            color: #34495e;
+        }
+        th {
+            background-color: #f5f7fa;
+            font-weight: bold;
+            color: #34495e;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: font-weight 0.15s;
+        }
+        a:hover {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .airbnb-image {
+            width: 80px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 20px;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                padding: 10px;
+            }
+            td {
+                text-align: right;
+                border: none;
+                font-size: 1em;
+                padding: 8px 5px;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+                color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="page-title">השוואת דירות Airbnb</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>תמונה</th>
+            <th>לינק</th>
+            <th>מחיר</th>
+            <th>תאריכים</th>
+            <th>מיקום</th>
+            <th>זמן נסיעה</th>
+            <th>מפה</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="תמונה">
+                <a href="https://www.airbnb.com/l/szVF24gj" target="_blank">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NjYyMTAzMTE5MTkwODA1Nzc0/original/42ab0719-9dcd-4421-88a7-0fee61c5e625.jpeg?im_w=1200" alt="דירה 1" class="airbnb-image">
+                </a>
+            </td>
+            <td data-label="לינק"><a href="https://www.airbnb.com/l/szVF24gj" target="_blank">דירה 1</a></td>
+            <td data-label="מחיר">4,000 ₪</td>
+            <td data-label="תאריכים">21-22.8 (שישי-שבת)</td>
+            <td data-label="מיקום">מושב הודיה (ליד אשקלון)</td>
+            <td data-label="זמן נסיעה">כ-45 דקות</td>
+            <td data-label="מפה"><a href="https://maps.app.goo.gl/UGnhbACSSuBkWsDx8" target="_blank">למפה</a></td>
+        </tr>
+        <tr>
+            <td data-label="תמונה">
+                <a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1083261386400424042/original/8ddd7832-8187-48b8-b2f3-1cea32eec765.jpeg?im_w=1200" alt="דירה 2" class="airbnb-image">
+                </a>
+            </td>
+            <td data-label="לינק"><a href="https://www.airbnb.com/l/wZaVVGgi" target="_blank">דירה 2</a></td>
+            <td data-label="מחיר">2,200 ₪</td>
+            <td data-label="תאריכים">21-22.8 (שישי-שבת)</td>
+            <td data-label="מיקום">אחוזת ברק, עמק יזרעאל</td>
+            <td data-label="זמן נסיעה">כ-1 שעה ו-45 דקות</td>
+            <td data-label="מפה"><a href="https://maps.app.goo.gl/PUcvGb8MoA3jvDg96" target="_blank">למפה</a></td>
+        </tr>
+        <tr>
+            <td data-label="תמונה">
+                <a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTM2NjE4NzU2NTk1MjQ1MTU5/original/237d358c-82cb-489e-ba36-bf0e0ad2dd4d.jpeg?im_w=1440" alt="דירה 3" class="airbnb-image">
+                </a>
+            </td>
+            <td data-label="לינק"><a href="https://www.airbnb.com/l/ZjjrLKu6" target="_blank">דירה 3</a></td>
+            <td data-label="מחיר">2,250 ₪</td>
+            <td data-label="תאריכים">7-8.8 (חמישי-שישי)</td>
+            <td data-label="מיקום">אשדוד</td>
+            <td data-label="זמן נסיעה">כ-35 דקות</td>
+            <td data-label="מפה"><a href="https://maps.app.goo.gl/fCKos3c9G3q8NwN38" target="_blank">למפה</a></td>
+        </tr>
+        <tr>
+            <td data-label="תמונה">
+                <a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">
+                    <img src="https://a0.muscache.com/im/pictures/a11b7015-8392-4495-9757-243b3129c5b8.jpg?im_w=1200" alt="דירה 4" class="airbnb-image">
+                </a>
+            </td>
+            <td data-label="לינק"><a href="https://www.airbnb.com/l/csx0dSVR" target="_blank">דירה 4</a></td>
+            <td data-label="מחיר">3,500 ₪</td>
+            <td data-label="תאריכים">7-8.8 (חמישי-שישי)</td>
+            <td data-label="מיקום">מושב עוצם (ליד קרית גת)</td>
+            <td data-label="זמן נסיעה">כ-50 דקות</td>
+            <td data-label="מפה"><a href="https://maps.app.goo.gl/r6nT4q2Lt9UDtGcRA" target="_blank">למפה</a></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
